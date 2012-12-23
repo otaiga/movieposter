@@ -1,14 +1,17 @@
+<%= link_to "Back", root_path %>
 <% if @results.empty? %>
-  sorry we can't find anything for that movie <%= link_to "Back", root_path %>
+  sorry we can't find anything for that movie.
 <% end %>
 
 <% @results.each do |r| %>
   <div>
     <ul>
-      <% if r["image"] %>
-        <li><%= r["title"] %></li>
-        <li><img style="height: 600px; width: 400px"src=<%= @image + r["image"] %>/> </li>
+      <li><%= r["title"] %></li>
+      <% if r["release_date"] %>
+        <li>Released: <%= r["release_date"] %></li>
       <% end %>
+      <li><img style="height: 600px; width: 400px"src=<%= @image + r["image"] %>/> </li>
+      <%= will_paginate @results %>
     </ul>
   </div>
 <% end %>
