@@ -18,3 +18,6 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'rspec-rails'
 end
+
+# Adding in httparty
+  gem 'httparty'
