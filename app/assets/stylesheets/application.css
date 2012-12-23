@@ -12,6 +12,19 @@
  *= require_tree .
 */
 
+.cf:before, .cf:after{
+    content:"";
+    display:table;
+}
+ 
+.cf:after{
+    clear:both;
+}
+ 
+.cf{
+    zoom:1;
+}    
+
 /* Form */
 
 .formBackground {
@@ -22,16 +35,20 @@
   -ms-border-radius:10px;
   -o-border-radius:10px;
   border-radius: 10px;
+
   -o-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
   -moz-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
   -ms-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
   box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+
+  position:relative;
+  height:400px;
 }
 
 .formBackground input[type=text] {
     display:block;
-    margin:0 auto;
+    margin:20px auto;
     width: 80%;
     height: 20px;
     padding: 10px 5px;   
@@ -61,25 +78,27 @@
   font-family:'sans-serif';
   font-weight:normal;
   text-align:center;
+  margin-top:40px;
 }
 
 /* Submit Button */
 
 .formBackground input[type=submit] {
-overflow: visible;
+    overflow: visible;
     position: relative;
-    float: right;
     border: 0;
     padding: 0;
     cursor: pointer;
     height: 40px;
-    width: 110px;
+    width: 60%;
     font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
     color: #fff;
     text-transform: uppercase;
     background: #d83c3c;
     border-radius: 0 3px 3px 0;     
     text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+    display:block;
+    margin:10px auto;
 
 }
 
@@ -91,3 +110,50 @@ overflow: visible;
     background: #c42f2f;
     outline: 0;
 } 
+
+.formBackground input[type=submit]:before { /* left arrow */
+  content: '';
+  position: absolute;
+  -moz-border-width: 8px 8px 8px 0;
+  -webkit-border-width: 8px 8px 8px 0;
+  -o-border-width: 8px 8px 8px 0;
+  -ms-border-width: 8px 8px 8px 0;
+  border-width: 8px 8px 8px 0;
+
+  -moz-border-style: solid solid solid none;
+  -o-border-style: solid solid solid none;
+  -webkit-border-style: solid solid solid none;
+  -ms-border-style: solid solid solid none;
+  border-style: solid solid solid none;
+
+  -moz-border-color: transparent #d83c3c transparent;
+  -webkit-border-color: transparent #d83c3c transparent;
+  -ms-border-color: transparent #d83c3c transparent;
+  -o-border-color: transparent #d83c3c transparent;
+  border-color: transparent #d83c3c transparent;
+
+  top: 12px;
+  left: -6px;
+
+}
+
+.formBackground input[type=submit]:hover:before {
+  -moz-border-right-color: #e54040;
+  -webkit-border-right-color: #e54040;
+  -o-border-right-color: #e54040;
+  -ms-border-right-color: #e54040;
+   border-right-color: #e54040;
+}
+
+.formBackground input[type=submit]:focus:before, .formBackground input[type=submit]:active:before {
+  -moz-border-right-color: #c42f2f;
+  -o-border-right-color: #c42f2f;
+  -webkit-border-right-color: #c42f2f;
+  -ms-border-right-color: #c42f2f;
+  border-right-color: #c42f2f;
+}
+
+.formBackground input[type=submit]::-moz-focus-inner {
+  border:0;
+  padding:0;
+}
