@@ -1,3 +1,11 @@
-<%= @title %>
-<br>
-<img src=<%= @image %>/>
+<% @results.each do |r| %>
+  <div>
+    <ul>
+      <% if r["image"] %>
+        <li><%= r["title"] %></li>
+        <li><img style="height: 600px; width: 400px"src=<%= @image + r["image"] %>/> </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
