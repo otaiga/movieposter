@@ -1,5 +1,15 @@
-<h1>Movie Poster Finder </h1>
+<div class="container">
+  <div class="row">
+    <div class="span6 offset3 cf formBackground">
+      <h1>Movie Poster Finder </h1>
+      <%= form_tag main_results_path, :method => "get" %>
+      <%= text_field_tag 'search', nil, :placeholder => 'Enter Film Name Here.....' %>
+      <%= submit_tag "search" %>
 
-<%= form_tag main_results_path, :method => "get" %>
-<%= text_field_tag :search %>
-<%= submit_tag "search" %>
+
+    </div>
+  </div>
+</div>
+
+
+
