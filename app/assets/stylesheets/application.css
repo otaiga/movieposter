@@ -75,7 +75,6 @@
     height: 20px;
     padding: 10px 5px;   
     font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
-    border: 1px dashed #ccc;
     background: #eee;
     border-radius: 3px 0 0 3px;   
 }
