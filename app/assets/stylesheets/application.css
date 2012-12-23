@@ -12,6 +12,21 @@
  *= require_tree .
 */
 
+/* Fonts */
+
+@font-face {
+    font-family: 'HVDPosterRegular';
+    src: url('HVD_Poster-webfont.eot');
+    src: url('HVD_Poster-webfont.eot?#iefix') format('embedded-opentype'),
+         url('HVD_Poster-webfont.woff') format('woff'),
+         url('HVD_Poster-webfont.ttf') format('truetype'),
+         url('HVD_Poster-webfont.svg#HVDPosterRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 .cf:before, .cf:after{
     content:"";
     display:table;
@@ -75,7 +90,7 @@
 }
 
 .formBackground h1 {
-  font-family:'sans-serif';
+  font-family:'HVDPosterRegular';
   font-weight:normal;
   text-align:center;
   margin-top:40px;
