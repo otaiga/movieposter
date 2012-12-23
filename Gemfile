@@ -21,5 +21,10 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-# Adding in httparty
+
+# Adding in httparty for requests to api
   gem 'httparty'
+
+# Adding in pagination
+  gem 'will_paginate', '~> 3.0'
+
