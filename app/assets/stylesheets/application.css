@@ -11,3 +11,83 @@
  *= require_self
  *= require_tree .
 */
+
+/* Form */
+
+.formBackground {
+
+  background: rgba(0,0,0,.2);
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -ms-border-radius:10px;
+  -o-border-radius:10px;
+  border-radius: 10px;
+  -o-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+  -ms-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+
+.formBackground input[type=text] {
+    display:block;
+    margin:0 auto;
+    width: 80%;
+    height: 20px;
+    padding: 10px 5px;   
+    font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 1px dashed #ccc;
+    background: #eee;
+    border-radius: 3px 0 0 3px;   
+}
+
+.formBackground input[type=text]:focus{
+  outline: 0;
+  background: #fff;
+  -moz-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  -o-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  -ms-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+
+.formBackground input[type=text]-moz-placeholder, .formBackground input[type=text]::-webkit-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.formBackground h1 {
+  font-family:'sans-serif';
+  font-weight:normal;
+  text-align:center;
+}
+
+/* Submit Button */
+
+.formBackground input[type=submit] {
+overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #d83c3c;
+    border-radius: 0 3px 3px 0;     
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+
+}
+
+.formBackground input[type=submit]:hover {
+  background: #e54040;
+} 
+
+.formBackground input[type=submit]:active, .formBackground input[type=submit]:active {
+    background: #c42f2f;
+    outline: 0;
+} 
