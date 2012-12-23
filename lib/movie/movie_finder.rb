@@ -5,6 +5,7 @@ CONFIG_URL = "http://api.themoviedb.org/3/configuration?api_key="
 API_KEY = APP_CONFIG['api_key']
 
   def movie_search(query)
+    query = URI::encode(query)
     response = HTTParty.get(MOVIE_URL + API_KEY + "&query=#{query}", :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json' })
     results = JSON.parse(response.body)["results"]
     clean_up(results)

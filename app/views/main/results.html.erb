@@ -1,3 +1,7 @@
+<% if @results.empty? %>
+  sorry we can't find anything for that movie <%= link_to "Back", root_path %>
+<% end %>
+
 <% @results.each do |r| %>
   <div>
     <ul>
