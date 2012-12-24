@@ -28,3 +28,6 @@ end
 # Adding in pagination
   gem 'will_paginate', '~> 3.0'
 
+# Adding capistrano for deployment
+  gem 'capistrano'
+
