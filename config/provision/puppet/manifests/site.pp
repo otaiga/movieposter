@@ -3,7 +3,7 @@ Exec {
 }
 
 $extlookup_datadir = "/etc/puppet/extdata"
-$extlookup_precedence  = "settings"
+$extlookup_precedence  = "settings_production"
 
 $app_name       = extlookup("app_name"       , "my_app_name")
 $base_dir       = extlookup("base_dir"       , "/var/apps/")
