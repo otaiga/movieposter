@@ -89,7 +89,7 @@
   box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
 }
 
-.formBackground input[type=text]-moz-placeholder, .formBackground input[type=text]::-webkit-input-placeholder, .formBackground textarea:-moz-placeholder {
+.formBackground input[type=text]::-webkit-input-placeholder {
   color: #555;
   font-weight: normal;
   font-style: italic;
