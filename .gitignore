@@ -23,4 +23,4 @@ rerun.txt
 pickle-email-*.html
 /config/config.yml
 /config/provision/puppet/modules/movieposter/files/*
-/config/provision/puppet/extdata/settings.csv
+/config/provision/puppet/extdata/settings_production.csv
