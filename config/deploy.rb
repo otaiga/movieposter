@@ -1,1 +1,47 @@
-set :stages, %w( vagrant staging puppet_vagrant puppet_staging puppet_production )
+require 'bundler/capistrano'
+require 'capistrano/ext/multistage'
+
+set :application, "movieposter"
+set :repository,  "git@github.com:otaiga/movieposter.git"
+
+set :scm, :git
+set :stages, %w( vagrant puppet_vagrant puppet_production production)
+
+set :deploy_to, "/var/apps/movieposter"
+
+set :use_sudo, false
+
+#The below allows copy (no need for ssh keys, etc on the remote server)
+set :deploy_via, :copy
+set :copy_strategy, :export
+
+
+# if you want to clean up old releases on each deploy do this:
+after "deploy:restart", "deploy:cleanup"
+
+
+# If you are using Passenger mod_rails do this:
+namespace :deploy do
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+
+#Add the below to copy a config yml from shared dir.
+  desc "Copy the config.yml file into the latest release"
+  task :copy_in_config_yml do
+      run "cp #{shared_path}/config/config.yml #{latest_release}/config/"
+  end
+
+#Create DBs
+  desc "Create the databases"
+  task :create_db, :roles => :db do
+    run "cd #{current_path};bundle exec rake db:create RAILS_ENV=#{rails_env};bundle exec rake db:migrate RAILS_ENV=#{rails_env}"
+  end
+
+end
+
+after "deploy:update_code", "deploy:copy_in_config_yml"
+before "deploy:migrate", "deploy:copy_in_config_yml"
+before "deploy:assets:precompile", "deploy:copy_in_config_yml"

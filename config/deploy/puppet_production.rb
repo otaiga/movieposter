@@ -1,16 +1,15 @@
 server "33.33.0.3", :app, :web
 server "33.33.0.3", :db, :primary => true
 
-set :user, "vagrant"
-set :env, "vagrant"
+set :user, "ubuntu"
+set :env, "ubuntu"
 set :rails_env, "production"
 
-# This uses the key for vagrant box.
-ssh_options[:keys] = '~/.vagrant.d/insecure_private_key'
+ssh_options[:keys] = '~/.ssh/movieposter.pem'
 
 namespace :puppet do
   task :bootstrap do
-    system "config/provision/bootstrap/bootstrap_vagrant.sh"
+    system "config/provision/bootstrap/bootstrap_production.sh"
   end
 
   task :apply do

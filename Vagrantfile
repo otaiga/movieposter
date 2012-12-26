@@ -10,5 +10,5 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 22, 2222, :auto => true
   config.vm.forward_port 80, 8083
   config.vm.network :hostonly, "33.33.0.3"
-  config.vm.share_folder "puppet", "$HOME/provision", "./config/provision/"
+  #config.vm.share_folder "puppet", "$HOME/provision", "./config/provision/"
 end
