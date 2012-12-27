@@ -1,5 +1,5 @@
-server "33.33.0.3", :app, :web
-server "33.33.0.3", :db, :primary => true
+server "ec2-54-247-32-142.eu-west-1.compute.amazonaws.com", :app, :web
+server "ec2-54-247-32-142.eu-west-1.compute.amazonaws.com", :db, :primary => true
 
 set :user, "movie"
 set :env, "movie"
