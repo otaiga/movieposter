@@ -1,5 +1,5 @@
 <VirtualHost *:80>
-  ServerName <%= app_name %>
+  ServerName <%= app_url %>
   DocumentRoot "<%= app_dir %>current/public/"
   RailsEnv <%= environment %>
   CustomLog /var/log/apache2/<%= app_name %>-access_log combined
