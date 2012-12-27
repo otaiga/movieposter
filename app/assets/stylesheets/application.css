@@ -216,7 +216,19 @@
 }
 
 
+/* Footer */
 
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li a {
+  font-family: 'HVDPosterRegular';
+}
+
+footer ul li a:hover {
+  text-decoration: none;
+}
 
  
 
