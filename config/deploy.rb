@@ -28,6 +28,14 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 
+# Create the db's in cold deploy
+  desc "cold deploy: update, create_db, start"
+  task :cold do       # Overriding the default deploy:cold
+    update
+    create_db       # My own step
+    start
+  end
+
 #Add the below to copy a config yml from shared dir.
   desc "Copy the config.yml file into the latest release"
   task :copy_in_config_yml do
