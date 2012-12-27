@@ -1,8 +1,8 @@
-server "ec2-54-247-32-142.eu-west-1.compute.amazonaws.com", :app, :web
-server "ec2-54-247-32-142.eu-west-1.compute.amazonaws.com", :db, :primary => true
+server "www.karlturner.co.uk", :app, :web
+server "www.karlturner.co.uk", :db, :primary => true
 
-set :user, "ubuntu"
-set :env, "ubuntu"
+set :user, "kturner"
+set :env, "kturner"
 set :rails_env, "production"
 
 ssh_options[:keys] = '~/.ssh/movieposter.pem'
