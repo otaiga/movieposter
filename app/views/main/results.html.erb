@@ -9,7 +9,7 @@
       <% @results.each do |r| %>
          <h1 class="resultTitle"><%= r["title"] %></h1>
         <% if r["release_date"] %>
-         <h3 class="releaseDate">Released: <%= r["release_date"] %></h3>
+         <h3 class="releaseDate">Released: <%= date_format(r["release_date"]) %></h3>
       <% end %>
 
       <div class="thumbnail">
