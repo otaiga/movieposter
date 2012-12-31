@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="span6 offset3">
+     <% @results.each do |a| %>
+     <h3><%= a["collectionName"] %></h3>
+      <div class="thumbnail">
+       <img src=<%= a["artworkUrl100"].gsub("100x100-75.jpg", "400x400-75.jpg") %>>
+       <%= will_paginate @results, :inner_window => 1, :outer_window => 1, :renderer => BootstrapPagination::Rails %>
+      </div>
+      <%= link_to "Back To Search", root_path, :class => 'backButton' %>
+     <% end %>

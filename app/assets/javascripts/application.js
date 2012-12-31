@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+/*$(document).ready(function() {
+  $('#searchForm').onClick() {
+    if 
+      $('#movieForm') !== 'nul'
+      $('#movieForm').submit()
+    else if
+      $('#albumForm') !== 'nul' 
+      $('#albumForm').submit()    
+
+
+  });
+});*/
+
+$("#submitForm").submit(function() {
+    alert('clicked');
+  
+});
