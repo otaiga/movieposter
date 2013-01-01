@@ -223,12 +223,18 @@
 
 /* Footer */
 
+footer {
+  text-align: center;
+}
+
 footer ul {
   list-style-type: none;
+  margin: 0px 0px 10px 0px;
 }
 
 footer ul li a {
   font-family: 'HVDPosterRegular';
+  text-align: center;
 }
 
 footer ul li a:hover {
