@@ -4,15 +4,23 @@
       <h1>CoverArt Finder</h1>
 
       <h3>Search Movies</h3>
-      <%= form_tag main_results_path, :method => "get" %>
+      <%= form_tag main_results_path, :method => "get", :id => 'submitMovie' do %>
       <%= text_field_tag 'search', nil, :placeholder => 'Enter Film Name Here.....', :id => 'movieForm' %>
+     
+
+      <% end %>
+      
     
-      <h1>OR<h1>
+      <h1>OR</h1>
 
       <h3>Search Albums</h3>
-      <%= form_tag album_album_results_path, :method => "get" %>
+      <%= form_tag album_album_results_path, :method => "get", :id => 'submitAlbum' do %>
       <%= text_field_tag 'search', nil, :placeholder => 'Enter Artist Name here.....', :id => 'albumForm' %>
+    
+      <% end %>
+
       <%= submit_tag "search", :id => 'submitForm' %>
+
 
 
     </div>
