@@ -24,6 +24,11 @@ $(document).ready(function(){
         else if( $('#albumForm').val() ){
             formToSubmit='#submitAlbum';
         }
+         if( $('#albumForm, #movieForm').val() ){
+          alert('Sorry, you cant fill in both forms');
+          return false;
+
+        }
         if(formToSubmit!==null){
             $(formToSubmit).submit();
         }
