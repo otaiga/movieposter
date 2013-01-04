@@ -108,6 +108,16 @@
   text-align:center;
 }
 
+/* Label Tags */
+
+.labelTag{
+   text-align:center;
+   font-family:'HVDPosterRegular';
+  
+}
+
+
+
 /* Submit Button */
 
 .formBackground input[type=submit], .backButton {
