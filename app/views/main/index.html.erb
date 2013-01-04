@@ -5,10 +5,10 @@
       <%= form_tag main_results_path, :method => "get" do %>
         <%= text_field_tag 'search', nil, :placeholder => 'Enter Film Name or Album Name Here.....'%>
         <div class="labelTag">
-        <%= label_tag "Movie" %>
-        <%= radio_button_tag 'submit_type', 'movie', true %>
-        <%= label_tag "Album" %>
-        <%= radio_button_tag 'submit_type', 'album' %>
+          <%= label_tag "Movie" %>
+          <%= radio_button_tag 'submit_type', 'movie', true %>
+          <%= label_tag "Album" %>
+          <%= radio_button_tag 'submit_type', 'album' %>
         </div>
         <%= submit_tag "search", :id => 'submitForm' %>
       <% end %>
