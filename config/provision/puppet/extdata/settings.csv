@@ -1,0 +1,5 @@
+app_name,movieposter
+base_dir,/var/apps/
+app_dir,/var/apps/movieposter/
+passenger_version,3.0.18
+pem_pub

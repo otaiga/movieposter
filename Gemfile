@@ -29,3 +29,6 @@ end
   gem 'will_paginate', '~> 3.0'
   gem 'will_paginate-bootstrap'
 
+# Adding capistrano for deployment
+  gem 'capistrano'
+
