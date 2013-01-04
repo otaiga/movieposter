@@ -14,7 +14,7 @@
 
       <div class="thumbnail">
        <img class="poster" src=<%= @image + r["image"] %>/>
-      <%= will_paginate @results, :inner_window => 1, :outer_window => 1, :renderer => BootstrapPagination::Rails %>
+      <%= will_paginate @results, :previous_label => "&laquo; Prev", :next_label => "Next &raquo;", :inner_window => 1, :outer_window => 1, :renderer => BootstrapPagination::Rails %>
       </div>
       <%= link_to "Back To Search", root_path, :class => 'backButton' %>
       <% end %>
