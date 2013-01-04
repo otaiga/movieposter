@@ -14,24 +14,3 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
-
-$(document).ready(function(){
-    $('#submitForm').click(function(){
-        var formToSubmit;
-        if( $('#movieForm').val() ){
-            formToSubmit='#submitMovie';
-        }
-        else if( $('#albumForm').val() ){
-            formToSubmit='#submitAlbum';
-        }
-         if( $('#albumForm, #movieForm').val() ){
-          alert('Sorry, you cant fill in both forms');
-          return false;
-
-        }
-        if(formToSubmit!==null){
-            $(formToSubmit).submit();
-        }
-        return false;
-    });
-});

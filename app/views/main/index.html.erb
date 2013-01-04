@@ -4,24 +4,12 @@
       <h1>CoverArt Finder</h1>
 
       <h3>Search Movies</h3>
-      <%= form_tag main_results_path, :method => "get", :id => 'submitMovie' do %>
-      <%= text_field_tag 'search', nil, :placeholder => 'Enter Film Name Here.....', :id => 'movieForm' %>
-     
-
-      <% end %>
-      
-    
-      <h1>OR</h1>
-
-      <h3>Search Albums</h3>
-      <%= form_tag album_album_results_path, :method => "get", :id => 'submitAlbum' do %>
-      <%= text_field_tag 'search', nil, :placeholder => 'Enter Artist Name here.....', :id => 'albumForm' %>
-    
-      <% end %>
-
+      <%= form_tag main_results_path, :method => "get" do %>
+      <%= text_field_tag 'search', nil, :placeholder => 'Enter Film Name Here.....'%>
+      <%= label_tag "Movie" %><%= radio_button_tag 'submit_type', 'movie', true %>
+      <%= label_tag "Album" %><%= radio_button_tag 'submit_type', 'album' %>
       <%= submit_tag "search", :id => 'submitForm' %>
-
-
+      <% end %>
 
     </div>
   </div>
