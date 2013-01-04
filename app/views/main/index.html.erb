@@ -2,20 +2,16 @@
   <div class="row">
     <div class="span6 offset3 cf formBackground">
       <h1>CoverArt Finder</h1>
-
-     
-
       <%= form_tag main_results_path, :method => "get" do %>
-      <%= text_field_tag 'search', nil, :placeholder => 'Enter Film Name or Album Name Here.....'%>
-      <div class="labelTag">
-      <%= label_tag "Movie" %>
-      <%= radio_button_tag 'submit_type', 'movie', true, :id => 'movieTag' %>
-      <%= label_tag "Album" %>
-      <%= radio_button_tag 'submit_type', 'album', :id => 'albumTag' %>
-      </div>
-      <%= submit_tag "search", :id => 'submitForm' %>
+        <%= text_field_tag 'search', nil, :placeholder => 'Enter Film Name or Album Name Here.....'%>
+        <div class="labelTag">
+        <%= label_tag "Movie" %>
+        <%= radio_button_tag 'submit_type', 'movie', true %>
+        <%= label_tag "Album" %>
+        <%= radio_button_tag 'submit_type', 'album' %>
+        </div>
+        <%= submit_tag "search", :id => 'submitForm' %>
       <% end %>
-
     </div>
   </div>
 </div>
