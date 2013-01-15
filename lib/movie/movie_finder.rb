@@ -2,7 +2,7 @@ module Movie::MovieFinder
 
 MOVIE_URL = "http://api.themoviedb.org/3/search/movie?api_key="
 CONFIG_URL = "http://api.themoviedb.org/3/configuration?api_key="
-API_KEY = APP_CONFIG['api_key']
+API_KEY = APP_CONFIG['api_key'] || ENV["API_KEY"]
 
   def movie_search(query)
     query = URI::encode(query)
