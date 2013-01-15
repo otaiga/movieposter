@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'mysql2'
 
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,6 +24,7 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'rspec-rails'
   gem 'brakeman'
+  gem 'heroku'
 end
 
 
@@ -32,4 +37,3 @@ end
 
 # Adding capistrano for deployment
   gem 'capistrano'
-
