@@ -1,1 +1,1 @@
-APP_CONFIG = YAML.load_file("#{Rails.root}/config/config.yml")[Rails.env] if File.exists?("#{Rails.root}/config/config.yml")
+APP_CONFIG = File.exists?("#{Rails.root}/config/config.yml") ? YAML.load_file("#{Rails.root}/config/config.yml")[Rails.env] : nil
